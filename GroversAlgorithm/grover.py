@@ -1,4 +1,3 @@
-from qiskit import QuantumCircuit
 from methods import *
 
 
@@ -17,6 +16,7 @@ def Grover(nqubits, marked):
 
     # step 1: apply Hadamard gates on all qubits
     grover_circuit.h(range(nqubits))
+    grover_circuit.draw(output='mpl', filename='illustrations/superposition.png')
 
     # step 2: apply r rounds of the phase oracle and the diffuser
     for _ in range(r):
